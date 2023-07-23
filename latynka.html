@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>Транслітерація в латинку</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Транслітерація в латинку</h1>
+        <textarea placeholder="Текст вводити сюди..." id="input"></textarea>
+        <button id="translate">Перекласти</button>
+        <textarea id="output" readonly></textarea>
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+			height: 100%;
+            background: linear-gradient(#b26bff, #6057ff)
+        }
+
+        h1 {
+            color: #ffffff;
+            margin: 0 0 20px 0;
+            padding: 0;
+            font-family: Roboto;
+            font-weight: 100;
+        }
+
+        .container {
+            height: 100%;
+            width: 800px;
+            display: flex;
+            justify-content: center;
+			align-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto 0 auto;
+        }
+
+        #input {
+            font-family: Roboto, Verdana;
+            font-weight: 100;
+            height: 250px;
+            width: 700px;
+            resize: none;
+            font-size: 19px;
+            padding: 15px 15px;
+            color: #444;
+            border-radius: 10px;
+            box-shadow: 5px 5px 30px rgba(93, 93, 93, 0.5);
+            border-color: rgb(216, 216, 216);
+            transition: 400ms;
+            border-style: none;
+        }
+
+        #input::placeholder {
+            font-family: Roboto;
+            font-weight: 300;
+            opacity: 0.2;
+            color: rgb(128, 128, 128);
+        }
+
+        #input:focus {
+            outline: none !important;
+            box-shadow: 0px 0px 30px rgb(255, 0, 255);
+
+        }
+
+        #output {
+            height: 250px;
+            width: 700px;
+            resize: none;
+            font-size: 19px;
+            padding: 15px 15px;
+            color: #444;
+            box-shadow: 5px 5px 30px rgba(93, 93, 93, 0.5);
+            border-color: rgb(245, 245, 245);
+            background-color: rgb(244, 244, 244);
+            border-radius: 10px;
+            transition: 300ms;
+            font-family: Roboto;
+            font-weight: 100;
+
+        }
+
+        #output:read-only {
+            background-color: #e1e1e1;
+        }
+
+        #output:focus {
+            box-shadow: 0px 0px 30px rgb(255, 0, 255);
+            outline: none !important;
+        }
+
+        button {
+            background: linear-gradient(#ffffff, #d4faff);
+            display: block;
+            height: 60px;
+            width: 300px;
+            font-size: 20px;
+            font-family: Roboto;
+            font-weight: 300;
+            margin: 30px 0 30px 0;
+            box-shadow: 1px 3px 10px #2020204d;
+            border-radius: 8px;
+            border-style: none;
+            transition: 0.15s all;
+        }
+
+        button:hover {
+            background-color: rgb(215, 241, 255);
+            transform: scale(1.05);
+            transition: 0.15s all;
+        }
+
+        button:active {
+            background-color: rgb(0, 0, 0);
+            transform: scale(1.08);
+            transition: 0.15s all;      
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                width: 510px;
+            }
+
+            #input {
+                font-size: 14px;
+            }
+
+            #output {
+                font-size: 14px;
+            }
+        }
+		
+		@media (max-width: 500px) {
+			.container {
+				width: 310px;
+			}
+
+			#input {
+				font-size: 12px;
+				/* width: 310px; */
+			}
+
+			#output {
+				font-size: 12px;
+			}
+        }
+
+        /* @media (max-height: 764px) {
+            h1 {
+                font-size: 18px;
+            }
+
+            .container {
+                height: 550px;
+                width: 350px;
+            }
+
+            #input {
+                height: 150px;
+                font-size: 14px;
+            }
+
+            #output {
+                height: 150px;
+                font-size: 14px;
+            }
+
+            #button {
+                margin: 10px 0;
+                height: 30px;
+                width: 150px;
+            }
+        } */
+    </style>
+    <script>
+        const abetka = {
+            'а': 'a',
+            'б': 'b',
+            'в': 'v',
+            'г': 'g',
+            'ґ': 'ĝ',
+            'д': 'd',
+            'е': 'e',
+            'є': 'je',
+            'ж': 'ž',
+            'з': 'z',
+            'и': 'y',
+            'і': 'i',
+            'ї': 'ji',
+            'й': 'j',
+            'к': 'k',
+            'л': 'l',
+            'м': 'm',
+            'н': 'n',
+            'о': 'o',
+            'п': 'p',
+            'р': 'r',
+            'с': 's',
+            'т': 't',
+            'у': 'u',
+            'ф': 'f',
+            'х': 'h',
+            'ц': 'c',
+            'ч': 'č',
+            'ш': 'š',
+            'щ': 'šč',
+            'ь': "'",
+            'ю': 'ju',
+            'я': 'ja',
+            ' ': ' ',
+            ', ': ', ',
+            ',': ',',
+            '. ': '. ',
+            '.': '.',
+            "'": "'",
+            "ʼ": "ʼ",
+        }
+        
+        function makeLatynka(kyrylka) {
+            let result = '';
+            for (let i = 0; i < kyrylka.length; i++) {
+                if (abetka[kyrylka[i].toLowerCase()] === undefined) {
+                    result += kyrylka[i];
+                } else {
+                    switch (kyrylka[i]) {
+                        case kyrylka[i].toLowerCase():
+                            result += abetka[kyrylka[i]];
+                            break;
+                        case 'Я':
+                            result += 'Ja';
+                            break;
+                        case 'Ї':
+                            result += 'Ji';
+                            break;
+                        case 'Є':
+                            result += 'Je';
+                            break;
+                        case 'Щ':
+                            result += 'Šč';
+                            break;
+                        case kyrylka[i].toUpperCase():
+                            result += abetka[kyrylka[i].toLowerCase()].toUpperCase();
+                            break;
+                    }
+                }
+            }
+            return result;
+        }
+
+        const btn = document.getElementById('translate');
+        btn.addEventListener('click', function () {
+            let input = document.getElementById('input');
+            let output = document.getElementById('output');
+            output.value = makeLatynka(input.value);
+            output.focus();
+        });
+    </script>
+</body>
+
+</html>
