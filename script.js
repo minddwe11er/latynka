@@ -1,4 +1,4 @@
-import {abetka} from '/obj.js';
+import {abetka} from './obj.js';
 
 function makeLatynka(kyrylka) {
     let result = '';
