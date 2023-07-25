@@ -1,0 +1,35 @@
+@media (max-width: 800px) {
+    .container {
+        width: 510px;
+    }
+
+    #input {
+        font-size: 14px;
+        height: 100px;
+        font-weight: 500;
+    }
+
+    #output {
+        font-size: 14px;
+        height: 100px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 310px;
+    }
+
+    #input {
+        font-size: 12px;
+        height: 100px;
+        font-weight: 500;
+    }
+
+    #output {
+        font-size: 12px;
+        height: 100px;
+        font-weight: 500;
+    }
+}

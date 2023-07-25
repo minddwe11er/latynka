@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(#b26bff, #6057ff)
+}
+
+h1 {
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-family: Roboto;
+    font-weight: 100;
+}
+
+.container {
+    height: 100%;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto 0 auto;
+}
+
+#input {
+    font-family: Roboto, Verdana;
+    font-weight: 300;
+    height: 250px;
+    width: 700px;
+    resize: none;
+    font-size: 19px;
+    padding: 15px 15px;
+    color: #444;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgba(93, 93, 93, 0.5);
+    border-color: rgb(216, 216, 216);
+    transition: 400ms;
+    border-style: none;
+}
+
+#input::placeholder {
+    font-family: Roboto;
+    font-weight: 300;
+    opacity: 0.2;
+    color: rgb(128, 128, 128);
+}
+
+#input:focus {
+    outline: none !important;
+    box-shadow: 0px 0px 30px rgb(255, 0, 255);
+
+}
+
+#output {
+    height: 250px;
+    width: 700px;
+    resize: none;
+    font-size: 19px;
+    padding: 15px 15px;
+    color: #444;
+    box-shadow: 5px 5px 30px rgba(93, 93, 93, 0.5);
+    border-color: rgb(245, 245, 245);
+    background-color: rgb(244, 244, 244);
+    border-radius: 10px;
+    transition: 300ms;
+    font-family: Roboto;
+    font-weight: 300;
+
+}
+
+#output:read-only {
+    background-color: #e1e1e1;
+}
+
+#output:focus {
+    box-shadow: 0px 0px 30px rgb(255, 0, 255);
+    outline: none !important;
+}
+
+button {
+    background: linear-gradient(#ffffff, #d4faff);
+    display: block;
+    height: 60px;
+    width: 300px;
+    font-size: 20px;
+    font-family: Roboto;
+    font-weight: 300;
+    margin: 30px 0 30px 0;
+    box-shadow: 1px 3px 10px #2020204d;
+    border-radius: 8px;
+    border-style: none;
+    transition: 0.15s all;
+}
+
+button:hover {
+    background-color: rgb(215, 241, 255);
+    transform: scale(1.05);
+    transition: 0.15s all;
+}
+
+button:active {
+    background-color: rgb(0, 0, 0);
+    transform: scale(1.08);
+    transition: 0.15s all;      
+}
