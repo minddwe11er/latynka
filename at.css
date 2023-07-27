@@ -28,14 +28,13 @@
         height: 50px;
         font-weight: 500;
     }
-    
+
     button {
         height: 40px;
         width: 200px;
         font-size: 15px;
         font-family: Roboto;
-        font-weight: 300;
         border-radius: 5px;
-        border-style: none;
+        margin: 20px 0 20px 0;
     }
 }
