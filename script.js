@@ -33,8 +33,7 @@ function makeLatynka(kyrylka) {
 
 const btn = document.getElementById('translate');
 btn.addEventListener('click', function () {
-    let input = document.getElementById('input');
-    let output = document.getElementById('output');
+    let [input, output] = document.querySelectorAll('.textbox');
     output.value = makeLatynka(input.value);
     output.focus();
 });

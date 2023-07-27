@@ -1,15 +1,9 @@
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .container {
         width: 510px;
     }
 
-    #input {
-        font-size: 14px;
-        height: 100px;
-        font-weight: 500;
-    }
-
-    #output {
+    .textbox {
         font-size: 14px;
         height: 100px;
         font-weight: 500;
@@ -21,15 +15,27 @@
         width: 310px;
     }
 
-    #input {
+    .textbox {
         font-size: 12px;
         height: 100px;
         font-weight: 500;
     }
+}
 
-    #output {
+@media (max-height: 500px) {
+    .textbox {
         font-size: 12px;
-        height: 100px;
+        height: 50px;
         font-weight: 500;
+    }
+    
+    button {
+        height: 40px;
+        width: 200px;
+        font-size: 15px;
+        font-family: Roboto;
+        font-weight: 300;
+        border-radius: 5px;
+        border-style: none;
     }
 }

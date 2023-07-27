@@ -30,7 +30,7 @@ h1 {
     margin: 0 auto 0 auto;
 }
 
-#input {
+.textbox {
     font-family: Roboto, Verdana;
     font-weight: 300;
     height: 250px;
@@ -46,43 +46,21 @@ h1 {
     border-style: none;
 }
 
-#input::placeholder {
+.textbox::placeholder {
     font-family: Roboto;
     font-weight: 300;
     opacity: 0.2;
     color: rgb(128, 128, 128);
 }
 
-#input:focus {
+.textbox:focus {
     outline: none !important;
     box-shadow: 0px 0px 30px rgb(255, 0, 255);
 
 }
 
-#output {
-    height: 250px;
-    width: 700px;
-    resize: none;
-    font-size: 19px;
-    padding: 15px 15px;
-    color: #444;
-    box-shadow: 5px 5px 30px rgba(93, 93, 93, 0.5);
-    border-color: rgb(245, 245, 245);
-    background-color: rgb(244, 244, 244);
-    border-radius: 10px;
-    transition: 300ms;
-    font-family: Roboto;
-    font-weight: 300;
-
-}
-
-#output:read-only {
+.textbox:read-only {
     background-color: #e1e1e1;
-}
-
-#output:focus {
-    box-shadow: 0px 0px 30px rgb(255, 0, 255);
-    outline: none !important;
 }
 
 button {
