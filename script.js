@@ -3,7 +3,7 @@ import {abetka} from './obj.js';
 function makeLatynka(kyrylka) {
     let result = '';
     for (let i = 0; i < kyrylka.length; i++) {
-        if (abetka[kyrylka[i].toLowerCase()] === undefined) {
+        if (!abetka[kyrylka[i].toLowerCase()]) {
             result += kyrylka[i];
         } else {
             switch (kyrylka[i]) {
