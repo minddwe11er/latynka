@@ -1,4 +1,4 @@
-import {abetka} from './obj.js';
+import { abetka } from './obj.js';
 
 function makeLatynka(kyrylka) {
     let result = '';
@@ -36,4 +36,33 @@ btn.addEventListener('click', function () {
     let [input, output] = document.querySelectorAll('.textbox');
     output.value = makeLatynka(input.value);
     output.focus();
+});
+
+const modal = document.querySelector('.modal');
+const info = document.querySelector('.info');
+const btnClose = document.querySelector('.close');
+const example = document.querySelectorAll('.example');
+const textBox = document.querySelector('.textbox');
+
+example.forEach(item => {
+    item.addEventListener('click', event => {
+        const text = event.target.innerText;
+        modal.style.opacity = '0';
+        const timeOut = setTimeout(
+            () => (modal.style.visibility = 'hidden'),
+            500
+        );
+        textBox.innerText = text;
+        btn.click();
+    });
+});
+
+info.addEventListener('click', () => {
+    modal.style.visibility = 'visible';
+    modal.style.opacity = '1';
+});
+
+btnClose.addEventListener('click', () => {
+    modal.style.opacity = '0';
+    const timeOut = setTimeout(() => (modal.style.visibility = 'hidden'), 500);
 });

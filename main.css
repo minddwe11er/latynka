@@ -9,7 +9,7 @@ html {
 
 body {
     height: 100%;
-    background: linear-gradient(#b26bff, #6057ff)
+    background: linear-gradient(#b26bff, #6057ff);
 }
 
 h1 {
@@ -56,7 +56,6 @@ h1 {
 .textbox:focus {
     outline: none !important;
     box-shadow: 0px 0px 30px rgb(255, 0, 255);
-
 }
 
 .textbox:read-only {
@@ -87,5 +86,90 @@ button:hover {
 button:active {
     background-color: rgb(0, 0, 0);
     transform: scale(1.08);
-    transition: 0.15s all;      
+    transition: 0.15s all;
+}
+
+.modal {
+    visibility: visible;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff00;
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    transition: opacity 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .modal-container {
+    display: flex;
+    width: 80vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal .block {
+    display: block;
+    height: 80vh;
+    width: 35vw;
+    background-color: #ffffffe4;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #0000002b;
+    padding: 20px;
+}
+
+.about {
+    font-family: Roboto, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+
+.block .box {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.block .example {
+    font-family: Roboto, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    font-size: 1.5vw;
+    font-weight: 300;
+    background-color: #4444441c;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.block .inst {
+    font-family: Roboto, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+
+.block .example:hover {
+    background-color: #44444429;
+}
+
+.modal .close {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+
+.info {
+    text-decoration: none;
+    color: #fff;
+    background-color: #7f16dbcb;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
 }

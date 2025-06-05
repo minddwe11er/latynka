@@ -14,12 +14,68 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
         rel="stylesheet"
     />
-    <title>Транслітерація в латинку</title>
+    <title>Ukrainisch in lateinischer Schrift</title>
 </head>
 
 <body>
+    <div class="modal">
+        <div class="close">X</div>
+        <div class="modal-container">
+            <div class="block about">
+                Diese kleine Anwendung konvertiert das ukrainische Alphabet in
+                kyrillischer Schrift in die lateinische Schrift.<br />
+                <br />
+                Als Grundlage für das lateinische Alphabet habe ich eine
+                Variante verwendet, die von einem ukrainischen YouTube-Blogger
+                und Linguisten vorgeschlagen wurde. <br />
+                <br />
+                Die App berücksichtigt Laute, die aus zwei Buchstaben bestehen –
+                sogenannte Digraphen.
+                <br />
+                <br />
+                Die Hauptidee hinter dieser Anwendung war, dass es sehr
+                umständlich war, große Texte manuell umzuschreiben.
+                <br />
+                <br />
+                Mit dieser App ist das nun ganz bequem möglich.
+                <br /><br />
+                Diese Art der lateinischen Schreibweise ist für
+                ukrainischsprachige Menschen fast sofort verständlich.
+            </div>
+            <div class="block">
+                <div class="inst">
+                    Du kannst auf eine der Varianten klicken, um zu sehen, wie
+                    es funktioniert, falls du keine kyrillische Tastaturbelegung
+                    hast.
+                </div>
+                <div class="box">
+                    <div class="example">
+                        За вікном дощ тихо грає на підвіконні, ніби стара пісня,
+                        що знайома з дитинства. У повітрі пахне спокоєм і теплим
+                        чаєм.
+                    </div>
+                    <div class="example">
+                        Песик загубився на вокзалі, але зовсім не хвилювався.
+                        Він знав, що світ повен добрих людей — і не помилився.
+                    </div>
+                    <div class="example">
+                        Він відкрив ноутбук, щоб трохи попрацювати, і через
+                        п’ять годин дізнався, як виживають єноти в Антарктиді.
+                        Прогрес був, але не той, на який він сподівався.
+                    </div>
+                    <div class="example">
+                        Іноді місто мовчить гучніше за людину. Ліхтарі світять,
+                        але не туди, куди ти шукаєш відповіді.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <h1>Транслітерація в латинку</h1>
+        <h1>
+            Ukrainisch in lateinischer Schrift
+            <a href="#" class="info">ⓘ</a>
+        </h1>
         <textarea
             placeholder="Текст вводити сюди..."
             class="textbox"
@@ -27,7 +83,7 @@
         >
 Українська мова — національна мова українців. Належить до східнослов'янської групи слов'янських мов, що входять до індоєвропейської мовної сім'ї, поряд із романськими, германськими, кельтськими, грецькою, албанською, вірменською та найближче спорідненими зі слов'янськими балтійськими мовами. Єдина державна мова України.</textarea
         >
-        <button id="translate">Перекласти</button>
+        <button id="translate">Transliteration</button>
         <textarea class="textbox" name="output" readonly></textarea>
     </div>
     <script type="module" src="./script.js"></script>
