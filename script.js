@@ -52,7 +52,7 @@ example.forEach(item => {
             () => (modal.style.visibility = 'hidden'),
             500
         );
-        textBox.innerText = text;
+        textBox.value = text;
         btn.click();
     });
 });
