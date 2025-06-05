@@ -164,6 +164,7 @@ button:active {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
     text-shadow: 0 0 5px #000;
+    cursor: pointer;
 }
 
 .info {
